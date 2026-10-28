@@ -1,7 +1,45 @@
 <h1>Listagem de livros</h1>
 
-<div class="card">
-  <span>Titulo: Harry Potter e a Pedra Filosofal</span> <br>
-  <span>Autor: JK</span> <br>
-  <span>Ano: 1997</span>
-</div>
+<!-- Exemplo de interpolação 
+<h2>{{ nome }}</h2>
+<h3> {{ retornaNome() }} </h3>-->
+
+<!-- Exemplo de For 
+@for (item of lista; track $index) {
+  <p>Id: {{ item.id }}</p>
+  <p>Nome: {{ item.nome }}</p>
+} @empty {
+  <p>Lista vazia</p>
+}-->
+
+<!-- Exemplo de If
+@if (teste) {
+  <span>Teste de condição verdadeira</span>
+} @else {
+  <span>Teste de condição falsa</span>
+} -->
+
+<!--Exemplo de switch
+ @switch (condicao) {
+  @case ('A') {
+    <h5>Condição A</h5>
+  }
+  @case ('B')
+  @case ('C') {
+    <span>Condição B e C</span>
+  }
+  @default {
+    <p>Opção default</p>
+  }
+} -->
+
+
+@for (livro of livrosCadastrados; track $index) {
+  @if (livro.disponivel) {
+    <div class="card">
+      <span>Titulo: {{ livro.titulo }}</span> <br>
+      <span>Autor: {{ livro.autor }}</span> <br>
+      <span>Categoria: {{ livro.categoria }}</span>
+    </div>
+  }
+}
