@@ -1,11 +1,63 @@
-.card {
-  border: 1px solid black;
-  width: fit-content;
-  padding: 8px 16px;
-  border-radius: 4px;
+.busca input {
+  height: 25px;
+  width: 200px;
 }
 
-.card:hover {
+.busca button {
+  margin-left: 16px;
+}
+
+.card-list {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+  row-gap: 16px;
+}
+
+.card-list .card {
+  width: 200px;
+  border: 1px solid black;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-list .card img { 
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  align-self: center;
+}
+
+.card-list .card .descricao { 
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.card-list .card .card-button {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 4px;
+  height: 30px;
+}
+
+.card-list .card:hover,
+button:hover {
   cursor: pointer;
-  scale: 1.05;
+  scale: 1.02;
+}
+
+.card-list .card .card-button button:disabled:hover {
+  cursor: initial;
+  scale: 1;
 }
